@@ -1,0 +1,9 @@
+OPEN pgadmin4
+
+
+username: superuser
+password: superuser
+
+
+password pgadmin: pgadmin
+
