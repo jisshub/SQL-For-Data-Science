@@ -21,3 +21,5 @@ SELECT * FROM employees WHERE department='Clothing' OR last_name LIKE 'M%';
 
 SELECT * FROM employees WHERE salary > 40000 AND (department='Clothing' OR department='Pharmacy');
 
+SELECT * FROM regions where region = "Central" OR country="Asia";
+
