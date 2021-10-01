@@ -19,5 +19,15 @@ SELECT * FROM employees ORDER BY region_id LIMIT 50;
 select first_name, last_name from employees order by hire_date LIMIT 10;
 
 -- ALIASES
+-- creating aliases for the column names. ie renaming columns using 'as' keyword not make column name permanent in table .
+-- always use " " while renaming incase there is two words
 
+select first_name as 'FN', last_name as 'LN', department as 'dept' from employees;
 
+-- columns names are renamed temporarily.
+
+select country as 'ctry' from regions;
+
+-- Practice --
+
+select hire_date as hdate from employees where first_name like 'M%' ORDER BY department LIMIT 20;
