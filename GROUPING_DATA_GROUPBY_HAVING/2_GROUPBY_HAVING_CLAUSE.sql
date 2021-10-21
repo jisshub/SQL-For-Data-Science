@@ -45,5 +45,32 @@ select department, region_id from employees
 -- it is because in region_id, there are 7 groups.
 
 
+use course_data;
 
+-- HAVING CLAUSE
+-- IF WANT TO SELECT DEPARTMENTS WHERE No of EMPLOYEES >35
+-- IF V USE WHERE CLASE  IT SHOWS ERROR, SINCE AGGREGATES ARE NOT ALLOWED IN WHERE
+-- AND ALSO WHERE is USED TO FILTER RECORDS, NOT TO FILTER AGGREGATES(here v filter based on aggregate)
+SELECT department from employees where count(*) > 35;
+
+-- USE HAVING INSTEAD OF WHERE INSUCH CASES. THUS WE GOT DEPARTMENTS WITH EMPLOYEES > 35.
+SELECT department,  count(*) from employees
+	group by department
+	HAVING count(*) > 35;
+
+-- POINTS TO NOTE:
+-- 1. USE GROUP BY BY FOLLOWED BY HAVING CLAUSE
+
+
+SELECT * FROM employees;
+
+-- SELECT DEPARTMENT WHERE SUM OF EMPLOYEES SALARY > 4000000 
+select department, sum(salary) from employees 
+	group by department
+	having sum(salary)>4000000;
+
+-- SELECT DEPARTMENT WHERE SUM OF SALARY
+
+select * from CARS;
+SELECT * FROM regions;
 
