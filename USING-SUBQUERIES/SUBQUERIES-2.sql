@@ -9,3 +9,6 @@ select * from employees where salary
 -- select fruit import data where supply is in range of minimum supply and 15000.
 SELECT * FROm fruit_imports where supply
 	between (select min(supply) from fruit_imports) and 15000;
+    
+-- SUBQUEIRES_PART2.SQL Finished
+
