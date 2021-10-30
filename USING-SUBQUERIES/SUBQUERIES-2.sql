@@ -24,7 +24,7 @@ select * from employees where region_id>(select region_id from regions where cou
 
 ----------------- ANY OPERATOR ------------------------
 -- ANY OPERATOR RETURNS TRUE IF ANY OF THE SUBQUERY VALUE MEETS THE WHERE CONDITION IN OUTER QUERY.
--- IE IF EMPLOYEES RECORDS HAVE REGION ID > ANY OF THE REGION ID RETURNED FROM SUBQUERY.THEN THAT WHERE CONDITION EVALUATES TO TRUE.
+-- IE IF EMPLOYEES RECORDS HAVE REGION ID > ANY OF THE REGION ID RETURNED FROM SUBQUERY. THEN WHERE CONDITION EVALUATES TO TRUE.
 -- FOR EG: IF SUBQUERY RETURNS REGIONID 4 AND 5,AND IF EMPLOYEE RECORDS HAVE REGION ID 4,5,8 AND 9.
 -- THEN WHERE CONDITION EVALUATES TO TRUE.
 SELECT * FROM employees WHERE region_id > ANY
@@ -49,7 +49,6 @@ select * from employees where region_id > ALL (select region_id from regions whe
 
 
 -- get all employee details whose salary > salary of professors working in Math and Astronomy department
-
 select * from employees where salary > ALL
 	(select salary from professor where department in ('Math', 'Astronomy'));
     
