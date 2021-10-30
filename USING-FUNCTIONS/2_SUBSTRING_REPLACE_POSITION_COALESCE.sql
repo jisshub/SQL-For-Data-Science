@@ -40,3 +40,4 @@ select * from departments;
 
 select division, coalesce(division, 'NO DIVISION') AS 'Formatted' FROM departments;
 
+
