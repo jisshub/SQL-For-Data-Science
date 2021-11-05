@@ -27,4 +27,16 @@ select first_name, e.department, division, country from employees e,
     regions r
     where e.department = d.department and e.region_id = r.region_id;
 
+-- -- EXERCISE -- ---
+-- retrieving country and total employees in that country using join
+select * from regions;
+
+select country, count(*) as total_employees from employees ep1, regions regs 
+	where ep1.region_id = regs.region_id
+    group by country;
+
+
+    
+
+    
 
