@@ -36,6 +36,19 @@ from employees;
 -- OVER(PARTITION BY department) : IT IS THE WINDOWING PORTION OF THE QUERY.
 -- so here v count all the records over a window that partition by department column.
 
+-- Example - 2
+-- IF WANT TO GET THE SUM OF SALALRIES THAT SPENT FOR EACH DEPARTMENT along with 
+-- first_name and department.
+select first_name, department, 
+	sum(salary) over(partition by department) as salary_sum
+    from employees 
+    group by department;
 
--- Example -2
+-- if v doesnt sepcify the partitioning in OVER(), IT RETURNS SUM OF ALL THE 
+-- EMPLOYEE SALARIES AND IT REPEATS FOR EVERY SINGE RECORDS.
+select first_name, department, 
+	sum(salary) over() as salary_sum
+    from employees 
+    group by department;
+
 
