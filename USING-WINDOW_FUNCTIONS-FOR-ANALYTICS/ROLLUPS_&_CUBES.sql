@@ -32,6 +32,9 @@ select country, sum(units_sold) from sales group by country;
 select city, sum(units_sold) as sum from sales group by city;
 
 -- -- -- ROLLUP()-- -- --
+
+https://www.javatpoint.com/mysql-rollup
+
 -- The ROLLUP clause is an extension of the GROUP BY clause 
 -- that produces another row and shows the grand-total (super-aggregate) values
 -- If we want to understand the ROLLUP modifier, 
