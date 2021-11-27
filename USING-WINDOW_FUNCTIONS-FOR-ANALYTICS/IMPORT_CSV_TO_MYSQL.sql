@@ -23,7 +23,10 @@ CREATE TABLE sales_record
 
 -- 2. Access MySQL Shell
 
--- mysql –u username –p
+```bash
+mysql –u username –p
+```
+- give username and password
 
 -- 3. Choose database
 use course_data;
